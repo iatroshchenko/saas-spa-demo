@@ -1,0 +1,188 @@
+/* ===== START Progress Bar CSS ===== */
+
+/*ol*/
+
+.steps {
+  user-select: none;
+  /* 1 */
+  counter-reset: steps;
+  /* 2 */
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0px !important;
+	border-radius: 0.35em;
+	
+	display: block;
+}
+
+@media (min-width: 1920px) {
+	.steps-count-9,
+	.steps-count-10,
+	.steps-count-11,
+	.steps-count-12,
+	.steps-count-13,
+	.steps-count-14,
+	.steps-count-15 {
+		display: flex;
+	}
+}
+
+@media (min-width: 1860px) {
+	.steps.steps-count-8 {
+		display: flex;
+	}
+}
+
+@media (min-width: 1700px) {
+	.steps.steps-count-7 {
+		display: flex;
+	}
+}
+
+@media (min-width: 1600px) {
+	.steps.steps-count-6 {
+		display: flex;
+	}
+}
+
+@media (min-width: 1350px) {
+	.steps.steps-count-5 {
+		display: flex;
+	}
+}
+
+@media (min-width: 1200px) {
+	.steps.steps-count-4,
+	.steps.steps-count-3,
+	.steps.steps-count-2 {
+		display: flex;
+	}
+}
+
+/** * Steps * 1. Incrementing counter */
+/*li*/
+ol.steps li {
+  counter-increment: steps;
+  /* 1 */
+  margin-top: 0px !important;
+  background: #f2f2f2;
+  float: left;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+	height: 42px;
+	margin-bottom: 10px;
+  /** * Defining step width depending on the number of steps */
+  /** * Arrow shapes */
+  /** * Small width stuff kids */
+}
+
+ol.steps li:after {
+	width: 2.2em;
+	height: 2.2em;
+	position: absolute;
+	top: 6px;
+	right: -18px;
+	transform: rotate(45deg);
+	content: "";
+	z-index: 2;
+	background: inherit;
+	border-right: 3px solid #007bff;
+	border-top: 3px solid #007bff;
+	margin-left: -0.9280776503em;
+}
+
+ol.steps li[disabled] {
+  cursor: not-allowed;
+}
+
+ol.steps li:hover {
+	// Add hover
+}
+
+@media (max-width: 767px) {
+	ol.steps {
+		display: block;
+	}
+
+  ol.steps li {
+    width: 100% !important;
+    border: 3px solid #32313e;
+    border-bottom: none;
+  }
+  ol.steps li:after {
+    content: none;
+  }
+}
+
+
+@media (max-width: 767px) {
+  ol.steps li:last-child {
+    border-bottom: 3px solid #32313e;
+  }
+}
+
+ol.steps li:last-child:after {
+  content: none;
+}
+
+/** * Step link */
+/*a|span*/
+ol.steps li span {
+  transition: 0.25s ease-out;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  font-weight: bold;
+  /** * Counter */
+  /** * Hover stuff */
+}
+
+ol.steps li span:before {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  content: counter(steps);
+  text-align: center;
+  background: $primary;
+  border-radius: 50%;
+  color: white;
+  margin: 0 1em;
+  line-height: 1.5em;
+}
+
+@media (max-width: 767px) {
+  ol.steps li span:before {
+    float: left;
+    margin-right: 0;
+  }
+}
+
+/** * Active state */
+/*a*/
+
+ol.steps li.active {
+  background: $primary;
+}
+
+/** * Change link colors */
+
+ol.steps li.active:after {
+  border-color: white;
+}
+
+ol.steps li.active span  {
+  color: white;
+}
+
+ol.steps li.active span:before {
+  background: white;
+  color: $primary;
+}
+
+ol.steps li.complete span:before {
+  content: "\F00C";
+  font-family: FontAwesome;
+}

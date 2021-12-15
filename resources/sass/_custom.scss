@@ -1,0 +1,188 @@
+@import '~datatables.net-bs4/css/dataTables.bootstrap4.min.css';
+
+// Write your custom css/scss here
+.validation-error {
+  color: $red;
+}
+
+select.form-control {
+  color: inherit;
+}
+
+.has-predictions {
+  position: relative;
+}
+
+.predictions {
+  position: absolute;
+  border-right: 1px solid #e8ebf1;
+  border-left: 1px solid #e8ebf1;
+  border-bottom: 1px solid #e8ebf1;
+  padding: 2px;
+  font-size: 12px;
+  z-index: 999;
+  background: #fff;
+  max-height: 100px;
+  width: 100%;
+  overflow-y: scroll;
+
+  &-prediction {
+    cursor: pointer;
+  }
+}
+
+span.input-group-addon {
+  cursor: pointer;
+}
+
+.modal-dialog.modal-lg {
+  width: 100%;
+}
+
+.modal-container {
+  height: 100%;
+  &.modal-too-high {
+    height: unset;
+  }
+}
+
+.btn-primary.disabled, .wizard > .actions a.disabled, .swal2-modal .swal2-actions button.disabled.swal2-confirm, .btn-primary:disabled, .wizard > .actions a:disabled, .swal2-modal .swal2-actions button.swal2-confirm:disabled {
+  color: #fff;
+  background-color: #2660f7;
+  border-color: #fff;
+}
+
+.nav {
+  &-item {
+    .nav {
+      &-link {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+label.label-required:after {
+  content: "*";
+  position: relative;
+  left: 5px;
+  color: #ec4f4f;
+}
+
+.sidebar .sidebar-body .nav .nav-link.router-link-exact-active {
+  color: #2660f7;
+}
+
+.sidebar .sidebar-body .nav.sub-menu .nav-item .nav-link.router-link-exact-active {
+  color: #2660f7;
+}
+
+.sidebar .sidebar-body .nav.sub-menu .nav-item .nav-link.router-link-exact-active::before {
+  border-color: #2660f7;
+  background-color: #2660f7;
+}
+
+.sidebar .sidebar-body .nav .nav-item .nav-link[aria-expanded=true] {
+  color: initial;
+}
+
+.sidebar .sidebar-body .nav .nav-item:hover .nav-link[aria-expanded=true] {
+  color: #2660f7;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+li.page-item {
+  cursor: pointer;
+}
+
+// Tabs
+.tabs-component {
+  margin: 20px 0;
+}
+
+.tabs-component-tabs {
+  margin-bottom: 5px;
+  padding-left: 0;
+}
+
+@media (min-width: 700px) {
+  .tabs-component-tabs {
+    border: 0;
+    align-items: stretch;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0;
+
+  }
+}
+
+.tabs-component-tab {
+  color: #999;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 0;
+  list-style: none;
+
+  &-a {
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.tabs-component-tab:not(:last-child) {
+  border-bottom: dotted 1px #ddd;
+}
+
+.tabs-component-tab.is-active {
+  color: #000;
+}
+
+.tabs-component-tab.is-disabled * {
+  color: #cdcdcd;
+  cursor: not-allowed !important;
+}
+
+@media (min-width: 700px) {
+  .tabs-component-tab {
+    background-color: #2660f7;
+    color: #fff;
+    width: 20%;
+    margin-right: 2px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.is-active {
+      
+    }
+  }
+}
+
+.tabs-component-tab-a {
+  align-items: center;
+  display: flex;
+  padding: .75em 1em;
+  text-decoration: none;
+}
+
+.tabs-component-panels {
+  padding: 4em 0;
+}
+
+@media (min-width: 700px) {
+  .tabs-component-panels {
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+.CodeMirror-code {
+  font-size: 16px;
+}
