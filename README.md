@@ -216,7 +216,7 @@ To make npm see updated MIX_APP_URL, You should re-run npm run watch command (in
     
 ## External Access
 
-There's an iframe feature - any company working with OSD - can setup our iframe on their website and get external access using
+There's an iframe feature - any company working with APP - can setup our iframe on their website and get external access using
 to our platform using their API key. To understand how this part of project works, check out api/v1 routes (routes/v1/api-v1.php)
 
 To setup external api keys (to demonstrate how iframe works) - there's a database seeder - database/seeders/UserTokensSeeder.php  

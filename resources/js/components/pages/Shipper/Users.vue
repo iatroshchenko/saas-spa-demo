@@ -7,7 +7,7 @@
             <div class="card">
               <div class="card-body">
                 <div class="forms-sample">
-                  <h6 class="card-title">This user can successfully start working with OSD</h6>
+                  <h6 class="card-title">This user can successfully start working with APP</h6>
 
                   <!-- Email -->
                   <div class="form-group">
