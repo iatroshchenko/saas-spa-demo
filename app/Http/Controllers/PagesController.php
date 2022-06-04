@@ -10,7 +10,6 @@ class PagesController extends Controller
 {
     public function hello()
     {
-        dd(User::all());
     }
 
 }
